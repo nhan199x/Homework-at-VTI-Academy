@@ -1,0 +1,82 @@
+<div class="container"> <h1 style="color: #0099cc;">Manage Group <i class="fa fa-users"></i></h1>
+    <div class="table-wrapper table-bordered"> <h2 style="text-align: center;">List group</h2> 
+
+        <!-- function row  -->
+        <div class="table-function">
+            <div class="row">
+                <div class="col-sm-9">
+                    <input type="text" id="inputSearch" placeholder="search group..."><button type="button" onclick="clickSearchButton()"><i class="fa fa-search" aria-hidden="true"></i></button>
+
+                </div>
+                <div class="col-sm-3" style="text-align: right;"> 
+                    <button type="button" class="btn btn-info add-new"><i class="fa fa-cloud-download" aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-info add-new"><i class="fa fa-filter" aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-info add-new" data-toggle="modal" onclick="openAddModal()"><i class="fa fa-plus"></i></button>
+                    <button type="button" class="btn btn-info add-new" onclick="clickGroupButton()" ><i class="fa fa-refresh" aria-hidden="true"></i></button>
+                    <button type="button" class="btn btn-info add-new" data-toggle="modal" onclick="openConfirmDelete()"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                </div>
+            </div>
+        </div>
+        <table class="table table-hover table-bordered ">
+
+            <!-- table header  -->
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="checkAll" onclick="checkAll()"></th>
+                    <th>STT</th>
+                    <th>groupName</th>
+                </tr>
+            </thead>
+
+            <!-- table body  -->
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+
+                <!-- header -->
+                <div class="modal-header">
+                    <h5 class="modal-title">Add group</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- body -->
+                <div class="modal-body">
+                    <div class="modal-container">
+
+                        <input type="hidden" id="id" name="id">
+
+                        <label for="name"><b>Group name</b></label><br>
+                        <input type="text" placeholder="Enter group name" name="groupName" id="groupName" required><br>
+
+                        <label for="department"><b>Member</b></label><br>
+                        <input type="number" placeholder="Enter number of members" name="member" id="member" required><br>
+
+                        <label for="phone"><b>Creator</b></label><br>
+                        <input type="text" placeholder="Enter creator name" name="creator" id="creator" required><br>
+
+                        <label for="phone"><b>Create date</b></label><br>
+                        <input type="date" placeholder="Enter create date" name="createDate" id="createDate" required><br>
+                    </div>
+                </div>
+
+                <!-- footer -->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" onclick="save()">Save</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- success alert -->
+    <div class="alert alert-info text-white" id="success-alert" style="display: none;">
+        <button type="button" class="close" data-dismiss="alert">x</button>
+        <strong>Success! </strong>
+    </div>  
+</div>

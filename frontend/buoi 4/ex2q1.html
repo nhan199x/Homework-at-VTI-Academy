@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(3000);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <p>demonstrate fadeIn() with diffirence parametter</p>
+    <button>click to fade in the boxes</button><br>
+    <div id="div1" style="background-color: red; height: 200px; width: 200px; display: none;"></div>
+    <div id="div2" style="background-color: green; height: 200px; width: 200px; display: none;"></div>
+    <div id="div3" style="background-color: gray; height: 200px; width: 200px; display: none;"></div>
+</body>
+
+</html>

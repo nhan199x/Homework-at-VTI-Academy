@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1" cellspacing="2" cellpadding="5">
+        <tr>
+            <td>Họ tên</td>
+            <td><input type="text" id="inputname" value=""></td>
+        </tr>
+        <tr>
+            <td>Số điện thoại</td>
+            <td><input type="tel" id="inputsdt" value=""></td>
+        </tr>
+
+        <tr>
+            <td>Giới tính</td>
+            <td style="text-align: center;"><input type="radio" name="gender" value="nam">nam
+                <input type="radio" name="gender" value="nữ">nữ</td>
+        </tr>
+        <tr>
+            <td>Sở thích</td>
+            <td> <form id="hobby">
+                <input type="checkbox" id="nghenhac" >
+                <label for="nghenhac"> Nghe nhạc</label><br>
+                <input type="checkbox" id="bongda">
+                <label for="nghenhac"> Bóng đá</label><br>
+                <input type="checkbox" id="dulich">
+                <label for="nghenhac"> Du lịch</label><br>
+                <input type="checkbox" id="docsach">
+                <label for="nghenhac"> Đọc sách</label></form></td>
+                
+        </tr>
+    </table>
+        <input type="button" onclick="display()" value="Hiển thị">
+    <script>
+        function display(){
+        var hoten=document.getElementById("inputname").value;
+        var sdt=document.getElementById("inputsdt").value;
+        var gioitinh= document.querySelector('input[name="gender"]:checked').value;
+        var String;
+        String="họ tên: "+hoten+"| Số điện thoại: "+sdt+"|Giới tính: "+gioitinh+"|Sở thích: ";
+        if(document.getElementById("nghenhac").checked == true){
+            String+="nghe nhạc, ";
+        }
+        
+        if(document.getElementById("bongda").checked == true)
+        {String+="bóng đá, ";}
+        if(document.getElementById("dulich").checked == true)
+        {String+="du lịch, ";}
+        if(document.getElementById("docsach").checked == true)
+        {String+="đọc sách ";}
+        window.alert(String);
+        }
+    </script>
+    
+</body>
+</html>

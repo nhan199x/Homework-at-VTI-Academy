@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script> 
+        $(document).ready(function(){
+          $("p").click(function(){
+            $("div").slideDown(10000);
+          });
+          $("button").click(function(){
+            $("div").stop();
+          });
+        });
+        </script> 
+</head>
+<body>
+    <button>Dung rut tien</button>
+    <p style="background-color: lightgray;width: 960px; text-align: center; border: 1px solid gray; margin: 0;"> Click vao day de rut tien</p>
+    <div style="background-color: lightgray;padding: 30px; display: none; width: 900px; height: 2000px; border: 1px solid gray; text-align: center;">Dang rut tien</div>
+</body>
+</html>

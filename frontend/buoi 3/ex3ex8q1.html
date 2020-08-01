@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Number 1: </span>
+    <input type="number" id="input1" ><br><br><br>
+    <span>Number 2: </span>
+    <input type="number" id="input2" ><br><br>
+    <input type="button" onclick="cong()" value="Cộng">
+    <input type="button" onclick="tru()" value="Trừ">
+    <input type="button" onclick="nhan()" value="Nhân">
+    <input type="button" onclick="chia()" value="Chia">
+    <input type="button" onclick="chiadu()" value="%">
+    <span>kết quả</span> <input type="number" id="result">
+
+    <script>
+        function cong(){
+            var a=parseFloat(document.getElementById("input1").value) ;
+            var b=parseFloat(document.getElementById("input2").value) ;
+            document.getElementById("result").value=a+b;
+        }
+        function tru(){
+            var a=parseFloat(document.getElementById("input1").value) ;
+            var b=parseFloat(document.getElementById("input2").value) ;
+            document.getElementById("result").value=a-b;
+        }function nhan(){
+            var a=parseFloat(document.getElementById("input1").value) ;
+            var b=parseFloat(document.getElementById("input2").value) ;
+            document.getElementById("result").value=a*b;
+        }function chia(){
+            var a=parseFloat(document.getElementById("input1").value) ;
+            var b=parseFloat(document.getElementById("input2").value) ;
+            document.getElementById("result").value=a/b;
+        }function chiadu(){
+            var a=parseFloat(document.getElementById("input1").value) ;
+            var b=parseFloat(document.getElementById("input2").value) ;
+            document.getElementById("result").value=a%b;
+        }
+    </script>
+
+</body>
+</html>

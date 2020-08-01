@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" cellspacing="2" cellpadding="5">
+        <tr>
+            <td>Nhap thang</td>
+            <td><input type="number" id="input1" value=""></td>
+        </tr>
+        <tr>
+            <td>Nhap nam</td>
+            <td><input type="number" id="input2" value=""></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="button" onclick="tinhngay()">Tính toán</button></td>
+        </tr>
+        <tr>
+            <td>số ngày trong tháng</td>
+            <td>
+                <p id="print"></p>
+            </td>
+        </tr>
+    </table>
+    <script>
+
+        function tinhngay() {
+            var thang = document.getElementById("input1").value;
+            var nam = document.getElementById("input2").value;
+            if (thang == 1 || thang == 3 || thang == 5 || thang == 7 || thang == 8 || thang == 10 || thang == 12) {
+                document.getElementById("print").innerHTML = 31;
+            }
+            if (thang == 4 || thang == 6 || thang == 9 || thang == 11) {
+                document.getElementById("print").innerHTML = 30;
+            }
+            if (thang == 2) {
+                if (nam % 4 == 0) {
+                    document.getElementById("print").innerHTML = 29;
+                }
+                else {
+                    document.getElementById("print").innerHTML = 28;
+                }
+            }
+
+
+
+
+        }
+    </script>
+</body>
+
+</html>

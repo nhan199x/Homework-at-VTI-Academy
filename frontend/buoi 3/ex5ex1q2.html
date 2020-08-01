@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function Department(id, name) {
+            this.id = id;
+            this.name = name;
+        }
+        var d1 = new Department(1, "bao ve");
+        var d2 = new Department(2, "Sale");
+        var d3 = new Department(1, "IT");
+        var departments = [d1, d2, d3];
+        function Exception(message) {
+            this.message = message;
+        }
+        function getIndex(index) {
+                if (index < departments.length) {
+                    console.log(departments[index]);
+                }
+                else {
+                    throw new Exception("Cannot find department");
+                }
+            }
+        try {
+            getIndex(4);
+        }
+        catch (err) {
+            console.log(err.message);
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

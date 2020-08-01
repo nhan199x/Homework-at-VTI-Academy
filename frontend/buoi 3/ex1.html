@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+        
+function Department(id, name){
+    this.id=id;
+    this.name=name;
+}
+function Position(id, name){
+    this.id=id;
+    this.name=name;
+}
+function Account(id, email, username, fullname, departments, positions, createDate){
+    this.id=id;
+    this.email=email;
+    this.username=username;
+    this.fullname=fullname;
+    this.departments=departments;
+    this.positions=positions;
+    this.createDate=createDate;
+}
+var d1=new Department(1,"bao ve");
+var p1=new Position(1,"truong phong");
+var a1=new Account(1,"lehoangnhan9x@gmail.com","nhanlehoang", "le hoang nhan", d1, p1, Date("2020-03-10"));
+    function q1(){
+        if(a1.department==null&&a1.departments==undefined){
+            console.log("nhan vien nay chua co phong ban");
+        }
+        else{
+            console.log("phong ban cua nhan vien nay la "+a1.departments.name);
+        }
+    }
+    q1();
+</script>
+</head>
+<body>
+    
+</body>
+</html>
